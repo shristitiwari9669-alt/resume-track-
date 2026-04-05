@@ -7,7 +7,7 @@ import os
 # Configure OpenRouter API
 # =========================
 client = OpenAI(
-    api_key="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",
+    api_key=st.secrets["OPENROUTER_API_KEY"],
     base_url="https://openrouter.ai/api/v1"
 )
 
