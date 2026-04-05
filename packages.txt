@@ -1,1 +1,3 @@
 mupdf
+zlib1g-dev
+libjpeg-dev
