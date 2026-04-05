@@ -6,8 +6,14 @@ import os
 # =========================
 # Configure OpenRouter API
 # =========================
+api_key = st.secrets.get("OPENROUTER_API_KEY")
+
+if not api_key:
+    st.error("Missing API key")
+    st.stop()
+
 client = OpenAI(
-    api_key=st.secrets["OPENROUTER_API_KEY"],
+    api_key=api_key,
     base_url="https://openrouter.ai/api/v1"
 )
 
